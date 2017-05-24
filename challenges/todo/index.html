@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Curso de Vue2 - Práctica 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./app.css">
+  </head>
+  <body>
+    <div id="app">
+      <pre style="font-size: .8em">{{$data}}</pre>
+      <form @submit.prevent>
+
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate" v-model="taskItem">
+            <label for="last_name">Añadir una tarea</label>
+          </div>
+
+
+          <div class="input-field col s3">
+            <select @change="getPriorityNames($event)" class="browser-default">
+              <option value="" disabled selected>Escoge prioridad</option>
+              <option v-for="priority in priorities" :value="priority.value">{{priority.text}}</option>
+            </select>
+          </div>
+
+          <div class="input-field col s3">
+            <button class="btn waves-effect waves-light" type="submit" name="action" @click="addItem">Añadir tarea</button>
+          </div>
+        </div>
+      </form>
+
+
+      <div class="row">
+        <div class="input-field col s3">
+          <select v-model="priorityFilter" class="browser-default">
+            <option value="" disabled selected>Filtrar por prioridad</option>
+            <option value="all">Mostrar todos</option>
+            <option v-for="(priority, index) in priorities" :value="index">{{priority}} - {{index}}</option>
+          </select>
+        </div>
+      </div>
+
+
+      <ul class="collection with-header">
+          <li class="collection-header">
+            <h4>Lista de tareas</h4>
+          </li>
+          <li v-for="(task, index) in filteredTasks" class="collection-item">
+            <span class="new badge" :class="badgePriority[index]" :data-badge-caption="task.priorityName"></span>
+            {{ task.name }}
+          </li>
+      </ul>
+
+    </div>
+    <!-- Javascript -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script>
+  </body>
+</html>

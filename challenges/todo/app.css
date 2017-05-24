@@ -1,0 +1,15 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+body {
+  background: #eee;
+  padding: 1em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+form {
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background: white;
+}
