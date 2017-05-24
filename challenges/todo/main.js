@@ -2,7 +2,7 @@ new Vue({
   el: '#app',
   data: {
     selectedPriority: '',
-    nombrequesea: '',
+    priorityType: '',
     priorityFilter: 'all',
     priorities: [
       { text: 'Sin prioridad', value: 0 },
@@ -18,14 +18,14 @@ new Vue({
       { name: 'Comprarme una camiseta nueva', priority: 0, priorityName: 'Sin prioridad' },
     ],
   },
-  
+
   methods: {
     getPriorityNames: function(event) {
       var target = event.target;
-      this.nombrequesea = target.options[target.selectedIndex].innerHTML;
-      this.selectedPriority = target.value;
+      this.priorityType = target.options[target.selectedIndex].innerHTML;
+      this.selectedPriority = parseInt(target.value);
     },
-    addItem: function() {
+    addTask: function() {
       if(this.taskItem === '' || this.selectedPriority === '') {
         alert('Debes escribir una tarea y seleccionar una prioridad');
       } else {
@@ -36,6 +36,9 @@ new Vue({
         })
         this.taskItem = '';
       }
+    },
+    removeTask: function (task) {
+      this.taskList.splice(this.taskList.indexOf(task), 1)
     },
   },
 
