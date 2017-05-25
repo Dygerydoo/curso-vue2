@@ -2,24 +2,109 @@
 
 body {
   background: #eee;
-  padding: 1em;
-  width: 80%;
   margin: 0 auto;
+  padding: 1em;
+  width: 100%;
+}
+.vue-Todo {
+  background: white;
+  margin: 0 auto;
+  width: 40%;
+  min-width: 350px;
+  max-width: 500px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
 }
 
-form {
+.vue-Todo_Header {
+  position: relative;
+  background: url('https://source.unsplash.com/collection/158643/') center center no-repeat;
+  border-radius: 3px 3px 0 0;
+  padding: 1em;
+  min-height: 200px;
+}
+
+.vue-Todo_Header .btn-floating {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+}
+
+.vue-Todo_AddTaskInput {
+  background: white;
+  position: absolute;
+  bottom: -35px;
+  width: 80%;
+  border-radius: 3px;
+  padding: 0 1em;
+}
+
+.vue-Todo_HeaderDate {
+  font-size: 3em;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 7px #000;
+}
+
+.vue-Todo_Body {
+  background: white;
+  min-height: 200px;
+}
+
+.vue-Todo_Button-remove {
+  display: flex;
+  -webkit-appearance: inherit;
+  background: transparent;
+  border: 0;
+  color: red;
+}
+
+.vue-Todo_Button-remove:focus {
+  background: transparent;
+}
+
+.input-field label:not(.label-icon).active {
+  background: white;
+  width: auto;
+  padding: .5em;
+}
+
+input[type=text].validate+label {
+  width: auto;
+}
+
+.collection {
+  margin: 0;
+  margin-top: 1em;
+  border: 0;
+}
+
+.collection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collection-item__text {
+  margin-right: auto;
+}
+
+.collection-item:hover .vue-Todo_Button-remove {
+	visibility: visible;
+}
+
+.collection-item .vue-Todo_Button-remove {
+  visibility: hidden;
+}
+
+
+
+/*form {
   border-radius: 3px;
   border: 1px solid #ddd;
   background: white;
 }
 
-.collection-item:hover .btn-floating {
-	display: inline-block;
-}
 
-.collection-item .btn-floating {
-  display: none;
-}
 
 [v-cloak]{
   display: none;
