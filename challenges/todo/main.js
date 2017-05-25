@@ -41,14 +41,13 @@ new Vue({
       this.taskList.splice(this.taskList.indexOf(task), 1)
     },
   },
-
   computed: {
     badgePriority: function() {
       return this.filteredTasks.map(task => ({
-        grey: task.priority == 0,
-        blue: task.priority == 1,
-        orange: task.priority == 2,
-        red: task.priority == 3
+        grey: task.priority === 0,
+        blue: task.priority === 1,
+        orange: task.priority === 2,
+        red: task.priority === 3
       }));
     },
     filteredTasks: function() {

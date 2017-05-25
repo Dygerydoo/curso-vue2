@@ -13,6 +13,14 @@ form {
   background: white;
 }
 
+.collection-item:hover .btn-floating {
+	display: inline-block;
+}
+
+.collection-item .btn-floating {
+  display: none;
+}
+
 [v-cloak]{
   display: none;
 }

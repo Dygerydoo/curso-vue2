@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./app.css">
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-cloak>
       <form @submit.prevent>
         <div class="row">
           <div class="input-field col s6">
@@ -47,7 +47,7 @@
           <li class="collection-header">
             <h4>Lista de tareas</h4>
           </li>
-          <li v-for="(task, index) in filteredTasks" class="collection-item" v-cloak>
+          <li v-for="(task, index) in filteredTasks" class="collection-item">
             <span class="new badge" :class="badgePriority[index]" :data-badge-caption="task.priorityName"></span>
             <button class="btn-floating red"
                     @click="removeTask(task)"><i class="close material-icons">close</i></button>
