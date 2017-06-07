@@ -28,8 +28,8 @@ new Vue({
       this.todoTitle = event.target.value;
       this.editTitle = false;
     },
-    removeTask: function (task) {
-      this.taskList.splice(this.taskList.indexOf(task), 1)
+    removeTask: function (index) {
+      this.taskList.splice(index, 1)
     },
     addTaskFocus: function() {
       this.$refs.taskInput.focus();
