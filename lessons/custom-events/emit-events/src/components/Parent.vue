@@ -1,8 +1,12 @@
 <template>
   <div id="parent">
     <h1 class="title">{{title}}</h1>
-    <app-comment-block v-if="show" @hide="show = false" :title="title"></app-comment-block>
-    <button v-if="!show" class="button is-danger" @click="showBlock">Mostrar de nuevo</button>
+    <app-comment-block v-if="show"
+                       :title="title"
+                       @hide="show = false"></app-comment-block>
+    <button v-if="!show"
+            class="button is-danger"
+            @click="showBlock">Mostrar de nuevo</button>
   </div>
 </template>
 

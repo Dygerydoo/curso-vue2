@@ -29,7 +29,7 @@
           </div>
         </nav>
       </div>
-      <button class="delete is-small" @click="hide"></button>
+      <button class="delete is-small" @click="hideModal"></button>
     </article>
   </div>
 </template>
@@ -38,7 +38,7 @@
 export default {
   props: ['title'],
   methods: {
-    hide() {
+    hideModal() {
       this.$emit('hide');
     }
   }
