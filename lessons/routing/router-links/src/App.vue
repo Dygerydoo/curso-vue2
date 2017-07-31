@@ -15,19 +15,4 @@ export default {
 </script>
 
 <style>
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1em;
-}
-
-.navbar-list {
-  display: flex;
-  flex-direction: row;
-}
-
-.navbar-list-item {
-  margin: 1em;
-}
 </style>
