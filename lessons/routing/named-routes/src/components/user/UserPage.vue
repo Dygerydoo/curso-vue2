@@ -18,6 +18,7 @@
           </div>
         </div>
       </article>
+      <router-link :to="{ name: 'DeleteUser' }">Eliminar usuario</router-link>
     </div>
   </div>
 </template>
