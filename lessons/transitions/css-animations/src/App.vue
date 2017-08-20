@@ -5,6 +5,9 @@
     <transition name="scale-fade">
       <h1 v-if="show" class="title is-1">Transiciones con Vue</h1>
     </transition>
+    <transition name="bounce">
+      <h1 v-if="show" class="title is-1">Animaciones con Vue</h1>
+    </transition>
   </div>
 </template>
 
@@ -20,6 +23,26 @@ export default {
 </script>
 
 <style>
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .scale-fade-enter {
   transform: scale(2);
   opacity: 0;
