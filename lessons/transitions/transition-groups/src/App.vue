@@ -41,8 +41,12 @@ export default {
 
 .scale-fade-leave-active {
   animation: bounce-in .5s reverse;
-  transition: background 2s;
-  background: red;
+  opacity: 0;
+  /*position: absolute;*/
+}
+
+.scale-fade-move {
+  transition: transform 1s;
 }
 
 @keyframes bounce-in {
@@ -50,7 +54,7 @@ export default {
     transform: scale(0);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
