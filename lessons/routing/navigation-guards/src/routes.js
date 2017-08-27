@@ -12,5 +12,7 @@ export const routes = [
       { path: ':userName', component: UserPage },
       { path: ':userName/delete', component: UserDelete, name: 'DeleteUser' },
   ] },
-  { path: '/contacto', component: Contact }
+  { path: '/contacto', component: Contact, beforeEnter: (to, from, next) => {
+    next();
+  } }
 ];

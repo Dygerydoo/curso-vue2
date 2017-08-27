@@ -3,9 +3,9 @@
     <button class="button button-primary" @click="show = !show">Mostrar/Ocultar</button>
     <br><br>
     <transition name="my-custom-animation"
-                enter-active-class="animated rollIn"
+                enter-active-class="animated bounceIn"
                 leave-active-class="animated hinge"
-                >
+    >
       <h1 v-if="show" class="title is-1">Transiciones con Vue</h1>
     </transition>
   </div>

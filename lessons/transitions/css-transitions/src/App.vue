@@ -2,7 +2,7 @@
   <div id="app">
     <button class="button button-primary" @click="show = !show">Mostrar/Ocultar</button>
     <br><br>
-    <transition name="scale-fade">
+    <transition name="fade">
       <h1 v-if="show" class="title is-1">Transiciones con Vue</h1>
     </transition>
   </div>
@@ -20,28 +20,31 @@ export default {
 </script>
 
 <style>
-.scale-fade-enter {
-  transform: scale(2);
+
+.fade-enter {
   opacity: 0;
-  color: red;
+  transform: scale(2);
 }
 
-.scale-fade-enter-active {
+.fade-enter-active {
   transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 
-.scale-fade-enter-to {
+.fade-enter-to {
   transform: scale(2.5);
 }
 
-.scale-fade-leave-active {
+.fade-leave {
+
+}
+
+.fade-leave-active {
   transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 
-.scale-fade-leave-to{
-  transform: scale(.8);
+.fade-leave-to{
   opacity: 0;
-  color: red;
+  transform: scale(.8);
 }
 
 #app {

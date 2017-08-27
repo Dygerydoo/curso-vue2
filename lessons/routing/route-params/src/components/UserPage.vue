@@ -28,6 +28,11 @@ export default {
     return {
       userName: this.$route.params.userName,
     };
+  },
+  watch: {
+    $route(to, from) {
+      this.userName = to.params.userName;
+    }
   }
 }
 </script>

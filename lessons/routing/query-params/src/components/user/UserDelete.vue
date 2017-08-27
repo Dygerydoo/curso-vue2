@@ -5,10 +5,9 @@
         <p class="subtitle">No podrás deshacer esta acción</p>
         <div class="content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-
-          <p>Nuestra query es: {{ $route.query.search }}</p>
         </div>
       </article>
+      <p>Nuestra query es: {{ $route.query.search }}</p>
     </div>
 </template>
 

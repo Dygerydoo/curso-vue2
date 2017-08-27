@@ -10,7 +10,7 @@ export const routes = [
   { path: '/usuario', component: User, children: [
       { path: '', component: UserList },
       { path: ':userName', component: UserPage },
-      { path: ':userName/delete', component: UserDelete },
-  ] },
+      { path: ':userName/delete', component: UserDelete }
+  ]},
   { path: '/contacto', component: Contact }
 ];

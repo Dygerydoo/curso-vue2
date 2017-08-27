@@ -1,9 +1,11 @@
 <template>
   <nav class="navbar">
     <ul class="navbar-list">
-      <li class="navbar-list-item"><router-link to="/">Inicio</router-link></li>
-      <li class="navbar-list-item"><router-link to="/contacto">Contacto</router-link></li>
-      <li class="navbar-list-item"><router-link to="/usuario">Usuario</router-link></li>
+      <router-link class="navbar-list-item" active-class="active" tag="li" exact to="/">
+        <a>Inicio</a>
+      </router-link>
+      <router-link class="navbar-list-item" active-class="active" tag="li" exact to="/contacto">Contacto</router-link>
+      <router-link class="navbar-list-item" active-class="active" tag="li" exact to="/usuario">Usuario</router-link>
     </ul>
   </nav>
 </template>
@@ -29,5 +31,9 @@ export default {
 
 .navbar-list-item {
   margin: 1em;
+}
+
+.active {
+  font-size: .8rem;
 }
 </style>

@@ -5,8 +5,8 @@
     <hr>
     <p>Si tienes cualquier duda</p>
     <br>
-    <button class="button is-primary"
-            @click="contactUs">Contacta con nosotros</button>
+    <button class="is-primary button"
+            @click="contactUs"> Contacta con nosotros</button>
   </div>
 </template>
 

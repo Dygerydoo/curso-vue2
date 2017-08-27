@@ -18,7 +18,7 @@
           </div>
         </div>
       </article>
-      <!-- <router-link :to="'/usuario/' + $route.params.userName + '/delete'">Eliminar usuario</router-link> -->
+      <router-link :to="`/usuario/${$route.params.userName}/delete`">Eliminar usuario</router-link>
     </div>
   </div>
 </template>

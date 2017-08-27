@@ -2,11 +2,11 @@
   <div id="app">
     <button v-on:click="add">Add</button>
     <button v-on:click="remove">Remove</button>
-    <transition-group name="scale-fade" tag="ul" class="list-group" type="animation">
-      <li v-for="number in numbers" :key="number" class="list-group-item">
-        {{ number }}
-      </li>
-    </transition-group>
+      <transition-group name="scale-fade" tag="ul" class="list-group" type="animation">
+        <li v-for="number in numbers" :key="number" class="list-group-item">
+          {{ number }}
+        </li>
+      </transition-group>
   </div>
 </template>
 
@@ -35,6 +35,10 @@ export default {
 </script>
 
 <style>
+.scale-fade-move {
+  transition: transform 1s;
+}
+
 .scale-fade-enter-active {
   animation: bounce-in .5s;
 }
@@ -42,11 +46,7 @@ export default {
 .scale-fade-leave-active {
   animation: bounce-in .5s reverse;
   opacity: 0;
-  /*position: absolute;*/
-}
-
-.scale-fade-move {
-  transition: transform 1s;
+  position: absolute;
 }
 
 @keyframes bounce-in {

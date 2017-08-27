@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <div class="my-block" v-rotate:small="50">
-    <!-- <div class="my-block" v-rotate:small="{ top: '50px', display: 'none' }"> -->
+    <div class="my-block" v-rotate="180">
       Estoy siendo modificado por una directiva
     </div>
   </div>

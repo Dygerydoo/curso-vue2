@@ -13,6 +13,5 @@ export const routes = [
       { path: ':userName/delete', component: UserDelete, name: 'DeleteUser' },
   ] },
   { path: '/contacto', component: Contact, name: 'contacto' },
-  // { path: '/redireccion', redirect: '/contacto' }
-  // { path: '/redireccion', redirect: { name: 'contacto' } },
+  { path: '/redireccion', redirect: { name: 'contacto' } }
 ];

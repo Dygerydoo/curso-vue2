@@ -3,7 +3,8 @@
     <ul class="navbar-list">
       <li class="navbar-list-item"><router-link to="/">Inicio</router-link></li>
       <li class="navbar-list-item"><router-link to="/contacto">Contacto</router-link></li>
-      <li class="navbar-list-item"><router-link to="/usuario/@johnsmith">Usuario</router-link></li>
+      <li class="navbar-list-item"><router-link to="/usuario/@evanyou">Usuario</router-link></li>
+      <li class="navbar-list-item"><router-link to="/usuario/@fran">Usuario</router-link></li>
     </ul>
   </nav>
 </template>
