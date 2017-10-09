@@ -4,7 +4,7 @@
       <li class="navbar-list-item"><router-link to="/">Inicio</router-link></li>
       <li class="navbar-list-item"><router-link to="/page2">Page 2</router-link></li>
       <li class="navbar-list-item">
-        <router-link :to="{ path: '/page2', hash: '#fourth'}">Page 2 Hash</router-link>
+        <router-link :to="{ path:'/page2', hash: '#fourth' }">Page 2 Hash</router-link>
       </li>
     </ul>
   </nav>

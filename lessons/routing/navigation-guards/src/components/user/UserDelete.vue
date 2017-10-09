@@ -7,7 +7,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
         </div>
       </article>
-      <button @click="saved = true">Guardar</button>
+      <button class="button" @click="saved = true">Guardar</button>
     </div>
 </template>
 
@@ -22,8 +22,7 @@ export default {
     if(this.saved) {
       next();
     } else {
-      alert('No has guardado los cambios');
-      next(false);
+      alert('No puedes continuar sin guardar');
     }
   }
 }

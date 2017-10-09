@@ -10,9 +10,8 @@ export const store = new Vuex.Store({
   getters: {
     divideCounter: state => {
       let result = state.counter;
+      result = result + 14;
       result = result * 3;
-      result = result + 7;
-      result = result - 1;
       return result / 2;
     }
   }

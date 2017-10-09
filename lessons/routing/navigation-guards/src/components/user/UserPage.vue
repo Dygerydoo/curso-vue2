@@ -30,17 +30,11 @@ export default {
       userName: this.$route.params.userName,
     };
   },
-  // beforeRouteEnter(to, from, next) {
-  //   if(true) {
-  //     next();
-  //   } else {
-  //     console.log('No vas a ver el componente');
-  //     next(false);
-  //   }
-  //   // next((vm) => {
-  //   //   console.log(vm.userName);
-  //   // });
-  // },
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      console.log(vm.userName);
+    });
+  }
 }
 </script>
 

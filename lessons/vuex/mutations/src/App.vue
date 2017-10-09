@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <h1>Ejemplo básico de Vuex</h1>
-    <p>El contador está a: {{ counter }}</p>
+    <p>El contador está a: {{ $store.state.counter }}</p>
+    <p> El contador sin dividir está a: {{ $store.state.counter }} y es {{ evenOrOdd }}</p>
     <counter></counter>
   </div>
 </template>
 
 <script>
 import Counter from './components/counter.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'app',
@@ -16,9 +18,10 @@ export default {
     }
   },
   computed: {
-    counter() {
-      return this.$store.state.counter;
-    }
+    ...mapGetters([
+      'divideCounter',
+      'evenOrOdd'
+    ])
   },
   components: {
     Counter,

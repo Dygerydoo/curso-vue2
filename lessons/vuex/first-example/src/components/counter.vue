@@ -8,15 +8,6 @@
 <script>
 export default {
   methods: {
-    // Antes de aplicar Vuex
-    // increaseCounter() {
-    //   this.$emit('increase', 1);
-    // },
-    // decreaseCounter() {
-    //   this.$emit('decrease', 1);
-    // }
-
-    // Después de aplicar Vuex
     increaseCounter() {
       this.$store.state.counter++;
     },
